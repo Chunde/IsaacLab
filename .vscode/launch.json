@@ -1,0 +1,116 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        // For standalone script execution
+        {
+            "name": "Python: Current File",
+            "type": "debugpy",
+            "request": "launch",
+            "env": {
+                "PYTHONPATH": "D:\\Development\\GitHub\\IsaacSim\\_build\\windows-x86_64\\release\\site",
+                "CARB_APP_PATH": "D:\\Development\\GitHub\\IsaacSim\\_build\\windows-x86_64\\release\\kit",
+                "ISAAC_PATH": "D:\\Development\\GitHub\\IsaacSim\\_build\\windows-x86_64\\release\\",
+                "EXP_PATH": "D:\\Development\\GitHub\\IsaacSim\\_build\\windows-x86_64\\release\\apps"
+            },
+            "program": "${file}",
+            "console": "integratedTerminal",
+        },
+        {
+            "name": "Python: Train Template-Isaac-Lab-Tutorial-Direct-v0 with skrl (PPO)",
+            "type": "debugpy",
+            "request": "launch",
+            "env": {
+                "PYTHONPATH": "D:\\Development\\GitHub\\IsaacSim\\_build\\windows-x86_64\\release\\site",
+                "CARB_APP_PATH": "D:\\Development\\GitHub\\IsaacSim\\_build\\windows-x86_64\\release\\kit",
+                "ISAAC_PATH": "D:\\Development\\GitHub\\IsaacSim\\_build\\windows-x86_64\\release\\",
+                "EXP_PATH": "D:\\Development\\GitHub\\IsaacSim\\_build\\windows-x86_64\\release\\apps"
+            },
+            "args": [
+                "--task",
+                "Template-Isaac-Lab-Tutorial-Direct-v0",
+                "--num_envs",
+                "4096",
+                "--headless",
+                "--algorithm",
+                "PPO"
+            ],
+            "program": "${workspaceFolder}/scripts/skrl/train.py",
+            "console": "integratedTerminal",
+        },
+        {
+            "name": "Python: Play Template-Isaac-Lab-Tutorial-Direct-v0 with skrl (PPO)",
+            "type": "debugpy",
+            "request": "launch",
+            "env": {
+                "PYTHONPATH": "D:\\Development\\GitHub\\IsaacSim\\_build\\windows-x86_64\\release\\site",
+                "CARB_APP_PATH": "D:\\Development\\GitHub\\IsaacSim\\_build\\windows-x86_64\\release\\kit",
+                "ISAAC_PATH": "D:\\Development\\GitHub\\IsaacSim\\_build\\windows-x86_64\\release\\",
+                "EXP_PATH": "D:\\Development\\GitHub\\IsaacSim\\_build\\windows-x86_64\\release\\apps"
+            },
+            "args": [
+                "--task",
+                "Template-Isaac-Lab-Tutorial-Direct-v0",
+                "--num_envs",
+                "32",
+                "--algorithm",
+                "PPO"
+            ],
+            "program": "${workspaceFolder}/scripts/skrl/play.py",
+            "console": "integratedTerminal",
+        },
+        // For script execution inside a Docker
+        {
+            "name": "Docker: Current File",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "env": {
+                "PYTHONPATH": "D:\\Development\\GitHub\\IsaacLab\\_isaac_sim\\python.bat"
+            }
+        },
+        {
+            "name": "Docker: Train Template-Isaac-Lab-Tutorial-Direct-v0 with skrl (PPO)",
+            "type": "debugpy",
+            "request": "launch",
+            "args": [
+                "--task",
+                "Template-Isaac-Lab-Tutorial-Direct-v0",
+                "--num_envs",
+                "4096",
+                "--headless",
+                "--algorithm",
+                "PPO"
+            ],
+            "program": "${workspaceFolder}/scripts/skrl/train.py",
+            "console": "integratedTerminal",
+            "env": {
+                "PYTHONPATH": "D:\\Development\\GitHub\\IsaacLab\\_isaac_sim\\python.bat"
+            },
+        },
+        {
+            "name": "Docker: Play Template-Isaac-Lab-Tutorial-Direct-v0 with skrl (PPO)",
+            "type": "debugpy",
+            "request": "launch",
+            "args": [
+                "--task",
+                "Template-Isaac-Lab-Tutorial-Direct-v0",
+                "--num_envs",
+                "32",
+                "--algorithm",
+                "PPO"
+            ],
+            "program": "${workspaceFolder}/scripts/skrl/play.py",
+            "console": "integratedTerminal",
+            "env": {
+                "PYTHONPATH": "D:\\Development\\GitHub\\IsaacLab\\_isaac_sim\\python.bat"
+            },
+        },
+    ],
+    "settings": {
+        "python.defaultInterpreterPath": "D:\\Development\\GitHub\\IsaacSim\\_build\\windows-x86_64\\release\\kit\\python\\kit.exe"
+    }
+}
